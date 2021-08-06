@@ -9,5 +9,9 @@ class FamousarttrApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+	@Test
+	String affichermessage() {
+		return "test reussi";
+	}
 
 }
