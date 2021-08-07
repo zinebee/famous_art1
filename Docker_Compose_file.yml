@@ -24,12 +24,12 @@ services:
      web:
          build : .
          ports :
-                          - "8080:8080"
+                          - "8083:8083"
          depends_on :
                           - mymongodb
                           - mymongodb-express
          environment :
-                         LOCALHOST_URI : http://localhost:8080/tableaus
+                         LOCALHOST_URI : http://localhost:8083/tableaus
                          REALM: FamousarttrApplication
                          
                           
