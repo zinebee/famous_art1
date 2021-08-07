@@ -22,7 +22,7 @@ pipeline{
     stage('Test Unitaire'){
         steps{
             sh 'mvn test'
-            sh 'mvn -v'
+            sh 'mvn clean'
         }
     }
 }
