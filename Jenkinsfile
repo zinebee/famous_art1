@@ -19,9 +19,20 @@ pipeline{
                 sh 'mvn clean package'
         }
     }
-    stage('Nouveaute et exclusivite Test Unitaire'){
+    stage('Test Unitaire'){
         steps{
             sh 'mvn test'
+        }
+    }
+    stage('Build the docker image'){
+        steps{
+            sh "docker build -t zinebee/famousart.jar:3 ."
+        }  
+    }
+    stage('Mettre cette image dans docker hub'){
+        steps{
+           sh "docker login -u zinebee -p ${env.User_Password}"
+           sh "docker push zinebee/famousart.jar:3"
         }
     }
 }
