@@ -19,7 +19,7 @@ pipeline{
                 sh 'mvn clean package'
         }
     }
-    stage('Nouveau Test Unitaire'){
+    stage('Nouveautt Test Unitaire'){
         steps{
             sh 'mvn test'
         }

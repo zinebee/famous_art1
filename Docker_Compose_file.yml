@@ -20,14 +20,14 @@ services:
                            - ME_CONFIG_MONGODB_PORT=27017
                            - ME_CONFIG_MONGODB_DATABASE=mydatabase
                     depends_on:
-                           - mymongodb
+                           - mymongodbb
      web:
          build : .
          ports :
                           - "8080:8080"
          depends_on :
                           - mymongodb
-                          - mymongodb-express 
+                          - mymongodb-express
          environment :
                          LOCALHOST_URI : http://localhost:8080/tableaus
                          REALM: FamousarttrApplication
